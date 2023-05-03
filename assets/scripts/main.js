@@ -15,10 +15,19 @@ button.addEventListener("click",
         }
 
         if (emailInputChecker === 1) {
-            console.log("Element found");
+            document.querySelector("h3").classList.add('green-text');
+            document.querySelector("h3").innerHTML = "Email corretta";
         } else {
-            console.log("Element not found");
+            document.querySelector("h3").classList.add('red-text');
+            document.querySelector("h3").innerHTML = "Email sbagliata";
         }
         
+        setTimeout(() => {
+            document.querySelector("h3").innerHTML = "";
+            document.querySelector("h3").classList.remove('red-text');
+            document.querySelector("h3").classList.remove('green-text');
+        }, 1000);
     }
 );
+
+
