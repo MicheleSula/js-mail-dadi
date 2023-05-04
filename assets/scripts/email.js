@@ -20,6 +20,7 @@ emailButton.addEventListener("click",
         for (let i = 0; i < mailUtente.length; i++) {
             if (emailInput === mailUtente[i]) {
               emailInputChecker = 1;
+              break;
             }
         }
 
